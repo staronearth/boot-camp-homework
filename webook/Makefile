@@ -1,0 +1,12 @@
+.PHONY: mock
+mock:
+	@mockgen -source=D:\\peoject\\gitee\\boot-camp-homework\\boot-camp-homework\\webook\\internal\\service\\user.go -package=svcmocks -destination=D:\\peoject\\gitee\\boot-camp-homework\\boot-camp-homework\\webook\\internal\\service\\mocks\\user.mock.go
+	@mockgen -source=D:\\peoject\\gitee\\boot-camp-homework\\boot-camp-homework\\webook\\internal\\service\\code.go -package=svcmocks -destination=D:\\peoject\\gitee\\boot-camp-homework\\boot-camp-homework\\webook\\internal\\service\\mocks\\code.mock.go
+	@mockgen -source=D:\\peoject\\gitee\\boot-camp-homework\\boot-camp-homework\\webook\\internal\\repository\\user.go -package=repomocks -destination=D:\\peoject\\gitee\\boot-camp-homework\\boot-camp-homework\\webook\\internal\\repository\\mocks\\user.mock.go
+	@mockgen -source=D:\\peoject\\gitee\\boot-camp-homework\\boot-camp-homework\\webook\\internal\\repository\\code.go -package=repomocks -destination=D:\\peoject\\gitee\\boot-camp-homework\\boot-camp-homework\\webook\\internal\\repository\\mocks\\code.mock.go
+	@mockgen -source=D:\\peoject\\gitee\\boot-camp-homework\\boot-camp-homework\\webook\\internal\\repository\\dao\\user.go -package=daomocks -destination=D:\\peoject\\gitee\\boot-camp-homework\\boot-camp-homework\\webook\\internal\\repository\\dao\\mocks\\user.mock.go
+	@mockgen -source=D:\\peoject\\gitee\\boot-camp-homework\\boot-camp-homework\\webook\\internal\\repository\\cache\\user.go -package=cachemocks -destination=D:\\peoject\\gitee\\boot-camp-homework\\boot-camp-homework\\webook\\internal\\repository\\cache\\mocks\\user.mock.go
+	@mockgen -package=redismocks -destination=D:\\peoject\\gitee\\boot-camp-homework\\boot-camp-homework\\webook\\internal\\repository\\cache\\redismocks\\cmdable.mock.go github.com/redis/go-redis/v9 Cmdable
+	@mockgen -source=D:\\peoject\\gitee\\boot-camp-homework\\boot-camp-homework\\webook\\internal\\web\\types.go -package=jwtmocks -destination=D:\\peoject\\gitee\\boot-camp-homework\\boot-camp-homework\\webook\\internal\\web\\mocks\\types.mock.go
+	@go mod tidy
+	@mockgen -source=F:\\code\\gitee\\boot-camp-homework\\webook\\internal\\web\\types.go -package=jwtmocks -destination=F:\\code\\gitee\\boot-camp-homework\\webook\\internal\\web\\mocks\\types.mock.go

@@ -3,6 +3,7 @@ module boot-camp-homework
 go 1.20
 
 require (
+	github.com/DATA-DOG/go-sqlmock v1.5.0
 	github.com/alibabacloud-go/darabonba-openapi/v2 v2.0.4
 	github.com/aliyun/alibaba-cloud-sdk-go v1.62.536
 	github.com/dlclark/regexp2 v1.10.0
@@ -17,6 +18,7 @@ require (
 	github.com/stretchr/testify v1.8.4
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.739
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/sms v1.0.739
+	go.uber.org/mock v0.2.0
 	golang.org/x/crypto v0.12.0
 	gorm.io/driver/mysql v1.5.1
 	gorm.io/gorm v1.25.3

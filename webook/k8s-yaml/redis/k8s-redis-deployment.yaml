@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: devops
+  name: k8s-redis-deployment
+  labels:
+    app: k8s-redis-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-redis-deployment
+  template:
+    metadata:
+      name: k8s-redis-deployment
+      labels:
+        app: k8s-redis-deployment
+    spec:
+      containers:
+        - name: k8s-redis-deployment
+          image: redis:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 6379
+      restartPolicy: Always
+      

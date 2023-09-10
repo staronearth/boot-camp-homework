@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: devops
+  name: k8s-webook-deployment
+  labels:
+    app: k8s-webook-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: k8s-webook-deployment
+  template:
+    metadata:
+      name: k8s-webook-deployment
+      labels:
+        app: k8s-webook-deployment
+    spec:
+      containers:
+        - name: k8s-webook-deployment
+          image: registry.cn-hangzhou.aliyuncs.com/staronearth/webook:v0.0.2
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+      restartPolicy: Always
